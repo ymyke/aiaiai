@@ -112,11 +112,16 @@ The mental model: each modality has its own translator that converts input into 
                                             "Your name is Max."
 ```
 
-**The key insight:** The LLM itself has no memory. Every round, the *entire conversation history* is sent again as input. The chatbot is an application layer that manages conversation history and includes it with every call.
+MN should we have the contrast heere where a plain LLM is asked "who am i?" repeatedly and responds with some slight vraition of "i dont knwo?"
 
-This explains why long conversations eventually break off (context window full), why the model "forgets" what was said 100 messages ago, and why each message in a long chat costs more (more input tokens).
+**The key insight:** The LLM itself has no memory. Every round, the *entire conversation history* is sent again as input. The chatbot is an application *around* the LLM that manages conversation history and includes it with every call.
 
-**Message format** — Most APIs use a role system. Think of it as a script with labeled speakers:
+This explains why long conversations eventually break off (context window full), why the model "forgets" what was said 100 messages ago, and why each message in a long chat costs more — or hits rate limits sooner — because of the growing token count.
+
+MN should we mention memory here? (or is it mentioned elsewhere?) and maybe even backref to memory from RAG below?
+
+
+**Message format** — Most LLM APIs use a role system. Think of it as a script with labeled speakers:
 
 ```
 messages: [
@@ -127,7 +132,7 @@ messages: [
 ]
 ```
 
-The "system" message sets behavior (more on that next). The "user" and "assistant" messages are the conversation turns. The application resends *all* of this every time — the LLM doesn't retain anything between calls.
+The "system" message sets behavior (more on that next). The "user" and "assistant" messages are the conversation turns. The roles serve a practical purpose: they let the model distinguish instructions to follow (system) from input to respond to (user) from its own prior responses to stay consistent with (assistant). This format is what every chatbot, API wrapper, and agent framework uses under the hood — including the tools we use daily.
 
 ---
 
@@ -328,7 +333,7 @@ Tool integrations are becoming standardized: **MCP (Model Context Protocol)**, a
        ├── Simple ("What is an SPV?")
        │         └──▶  Small model (fast, cheap)
        │
-       ├── Medium ("Summarize this memo")
+       ├── Medium ("Summarize this memo")b
        │         └──▶  Mid-tier model (balanced)
        │
        └── Complex ("Analyze this financial model")
