@@ -33,7 +33,7 @@ A Large Language Model is, at its core, a probability machine: it computes the m
 - **Training vs. Inference** — Training: the model learns from data (months, millions of $). Inference: the model answers a question (milliseconds, cents).
 
 
-*→ See [Under the Hood: The API Call](primer-uth.md#the-api-call) for what an LLM call actually looks like in code.*
+*→ See [Under the Hood: The API Call](uth.md#the-api-call) for what an LLM call actually looks like in code.*
 
 ### Tokens — The Machine's Language
 
@@ -117,7 +117,7 @@ PDFs deserve special mention: a PDF is not "just a document." It can contain sel
 
 **Rule of thumb:** Use multimodal input for triage, summarization, and first-pass interpretation. Use clean text or structured data when precision matters.
 
-*→ See [Under the Hood: From Pixels to Vectors](primer-uth.md#from-pixels-to-vectors) for how images and text are converted into the vectors the LLM actually processes.*
+*→ See [Under the Hood: From Pixels to Vectors](uth.md#from-pixels-to-vectors) for how images and text are converted into the vectors the LLM actually processes.*
 
 ---
 
