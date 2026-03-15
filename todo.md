@@ -15,6 +15,9 @@
   - vocab_size 
 - compaction?
 - context engineering even more challenging with agents
+- planning?
+- orchestration?
+- add links to other articles from the research-articles.md?
 
 # more fundamental thoughts
 
