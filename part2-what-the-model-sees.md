@@ -133,7 +133,7 @@ A rough reliability ranking:
 | Screenshots of tables         | Fragile                                           |
 | Video                         | Expensive and lossy                               |
 
-The farther the input is from clean text, the more the system must guess, compress, and reconstruct before reasoning can even begin.
+The common thread: multimodal AI is not "human-level seeing." It's a lossy compression of reality into tokens — powerful and convenient, but fundamentally different from how a person reads a document.
 
 **Rule of thumb:** Use multimodal input for triage, summarization, and first-pass interpretation. For high-stakes work, the practical pattern is: convert the raw input into clean text or structured data first, then let the model reason over that. Not because multimodality is bad, but because structured inputs are more controllable and auditable.
 
