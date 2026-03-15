@@ -171,6 +171,8 @@ The current generation (Claude with Extended Thinking, OpenAI's o1/o3) is fundam
 
 **When thinking helps:** Complex logic, math, multi-step analysis, code debugging. For simple questions, it's overkill — slower and more expensive.
 
+**Why is this in "What the Model Sees"?** Thinking started as a prompting technique — literally adding "think step by step" to what the model sees. Today it's baked into the model itself, but the trade-off is still about the context window: thinking tokens consume space that could go to other information.
+
 ---
 
 ## 11. Context Engineering — The Real Discipline

@@ -2,7 +2,7 @@
 - deliver as nice website? 
 - maybe with animations?
   
-
+- **Prompt Engineering** — currently folded into System Prompt (Part I, §3). Consider pulling it into Part II as its own section.
 - target audience: average whitecollar workers, not particularly computer savvy, use office software, chatbots, search etc.
 - memory?
 - why roles?

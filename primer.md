@@ -9,31 +9,33 @@
 
 ## [Part I: The Evolution](part1-the-evolution.md)
 
-From a simple text box to autonomous agents — each step builds on the last.
+A dependency chain from a simple text box to autonomous agents. Each step requires the previous one — this is the spine of the primer.
 
-1. The Plain LLM — The Foundation
-2. The Chatbot — Statefulness as Illusion
-3. The System Prompt — Programming Behavior
-4. Structured Output — Machine Talks to Machine
-5. Tool Use — Hands for the LLM
-6. The Agentic Loop — Autonomous Action
-7. Multi-Agent — Division of Labor
+1. **The Plain LLM** — What an LLM actually is: a stateless probability machine that predicts the next word.
+2. **The Chatbot** — The LLM has no memory; the application fakes it by resending the full conversation every time.
+3. **The System Prompt** — A hidden instruction at the start of every conversation that steers how the model behaves.
+4. **Structured Output** — Making the model respond in JSON instead of prose, so software can act on it.
+5. **Tool Use** — The model decides which tool to call; the application actually executes it.
+6. **The Agentic Loop** — Instead of one tool call, the model plans, acts, observes, and repeats until done.
+7. **Multi-Agent** — When one agent isn't enough, an orchestrator delegates to specialized subagents.
 
 ## [Part II: What the Model Sees](part2-what-the-model-sees.md)
 
-What flows through the system — and how it's processed on each call.
+Every section here is about the same scarce resource: the context window. What knowledge goes in, in what format, how deeply the model reasons over it — and how to orchestrate all of it.
 
-8. RAG — Tapping External Knowledge
-9. Multimodality — More Than Text
-10. Thinking Models — The Inner Monologue
-11. Context Engineering — The Real Discipline
+8. **RAG** — The model only knows its training data; RAG injects relevant documents into the prompt at runtime.
+9. **Multimodality** — Images, PDFs, and audio all get compressed into tokens — with trade-offs in detail, cost, and reliability.
+10. **Thinking Models** — Some models reason before answering, spending extra tokens on an internal monologue.
+11. **Context Engineering** — The discipline of filling the finite context window with the right information in the right order. *(Capstone of Part II.)*
 
 ## [Part III: In Practice](part3-in-practice.md)
 
-What matters when you use AI systems for real.
+The system works — now what? Part III covers the decisions and risks that matter when AI meets the real world.
 
-12. Routing — The Right Model for the Job
-13. Security & Risks
+12. **Routing** — Not every request needs the most powerful model; routing matches tasks to the right model for cost and speed.
+13. **Trusting the Output** — The model invents facts, fabricates sources, and gives you whatever opinion you ask for — all with the same confident tone.
+14. **Security & Risks** — Prompt injection, data privacy, and agent permissions: what can go wrong and how to mitigate it.
+15. **When to Use AI** — Where AI genuinely helps, where it's dangerous, and the one rule that tells them apart.
 
 ---
 
