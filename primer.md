@@ -52,6 +52,7 @@ The system works — now what? Part III covers the decisions and risks that matt
 | **Fine-Tuning**         | Retraining a model on custom data                                    |
 | **Harness**             | All application code around the LLM (loop, tools, RAG, routing)      |
 | **Context Engineering** | The discipline of optimally filling the context window on every call |
+| **Prompt Engineering**  | Popular term for writing effective prompts — this primer uses the broader term Context Engineering (§11) |
 | **Few-Shot**            | Examples in the prompt to demonstrate desired behavior               |
 | **Chain of Thought**    | Step-by-step reasoning, explicit or implicit                         |
 | **MCP**                 | Model Context Protocol — open standard for connecting tools to LLMs  |

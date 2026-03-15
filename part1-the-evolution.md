@@ -137,7 +137,7 @@ The "system" message sets behavior (more on that next). The "user" and "assistan
 
 The system prompt is a special message at the start of every conversation that steers the model's behavior. It's powerful, but not a command — more of a strong suggestion.
 
-This is where most practical "prompt engineering" happens: defining persona and tone, specifying output format, providing knowledge and context, setting rules and constraints, giving examples (few-shot prompting).
+This is where most practical "prompt engineering" happens: defining persona and tone, specifying output format, providing knowledge and context, setting rules and constraints, giving examples (few-shot prompting). As we'll see in §11, prompt engineering is actually one part of a bigger discipline — **Context Engineering** — that covers everything the model sees, not just the text you write.
 
 **Important:** The system prompt consumes tokens on *every message*, because it's resent every time.
 
