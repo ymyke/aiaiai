@@ -67,3 +67,21 @@ In the final result, UTH sections may be collapsible/hidden, expanded only on in
 - **Embeddings are supporting** — mentioned once to complete the picture, not a major topic
 - **Text is the native format** — multimodality expands input but text remains most reliable
 - **Practical relevance over technical completeness** — what does the reader need to *do* with this knowledge?
+- **Correct broken mental models** — each section earns its place by fixing a specific misconception the target audience holds. If the common intuition is already roughly correct, the section doesn't need deep treatment. The primer is most valuable where people *think* they understand something but their mental model is off. Evidence: Elon University/IDFC survey (Jan 2025, n=500 LLM users) found 49% think LLMs are smarter than they are, 40% say the LLM "understands" them; Nature Machine Intelligence found users systematically overestimate LLM accuracy; NN/g research confirms inaccurate mental models lead to underwhelming usage.
+
+## Editorial Filter: Mental Model Gaps by Section
+
+Each section should be evaluated against: (1) how wrong is the common intuition? (2) how well do existing resources correct it for our audience? Sections with high gaps on both axes are where the primer adds the most value.
+
+| Section | Common (wrong) intuition | What's actually true | Gap size |
+|---|---|---|---|
+| Multimodality | "The AI sees my image" | Images are tokenized (expensively); text remains more reliable; the model processes token representations, not visual perception | HIGH |
+| Context Engineering | "The AI remembers our conversation" | No memory — re-reads everything every call; context window ≠ usable memory; lost-in-the-middle problem | VERY HIGH |
+| Thinking Models | "The AI is reasoning step by step" | CoT faithfulness as low as 25% (Anthropic); visible "thinking" may not reflect actual computation; longer ≠ better | HIGH |
+| RAG | "Just upload all our documents and the AI will know them" | It searches then reads on each call; quality depends on retrieval, not just access | MODERATE |
+| Trusting the Output | "If the AI says it confidently, it's right" | Confidence ≠ accuracy; fabricates sources when pressed; never says "I don't know"; confirms whatever bias you bring | VERY HIGH |
+| Security | "I'm just chatting, what's the security risk?" | Prompt injection is unsolved; content the AI reads can hijack it; agent permissions amplify risk | HIGH |
+| When to Use AI | "AI is great for everything" / "AI can't be trusted" | Sweet spot is fuzzy input → structured output; dangerous for unverifiable outputs; knowing when NOT to use it matters most | HIGH |
+| Routing | "Use the best model for everything" | Different models for different tasks; 90% of tasks don't need the most powerful model | LOW |
+
+**Implication for Routing:** The mental model gap is small — the concept is straightforward once stated. Consider folding into "When to Use AI" or treating as a short sidebar rather than a full section.
