@@ -21,6 +21,7 @@
 - detetministic vs probabilistic (harness...)
 - pseudocode
 - ...
+- where do models fit in that do/understand complex biology, and basic physics
 
 # review
 
@@ -38,16 +39,6 @@ gimme a realistics example of how an llm-based system would "understand" an imag
 - everthing gets mapped to tokens "somehow". and that somehow matters.
 - positional awareness?
 
-clean text is still the model’s strongest input format
-
-
-images are useful, but often more approximate
-
-PDFs are often a mixture of text extraction + layout interpretation + sometimes image understanding
-
-tables / spreadsheets are especially fragile
-
-charts and diagrams can be read surprisingly well, but also misread in subtle ways
 
 
 # punchline?
@@ -93,112 +84,6 @@ main points are:
 
 
 
-# issues
-
-layout confusion
-
-chart misreading
-
-missing text hidden in images
-
-overconfidence about visual evidence
-
-
-missing small text
-
-confusing numbers
-
-misreading tables
-
-incorrect chart values
-
-
-Even though models can read slides well, they struggle with:
-
-very small fonts
-
-dense tables
-
-rotated text
-
-overlapping labels
-
-complex charts
-
-blurry screenshots
-
-Because the representation is still compressed visual features, not symbolic characters.
-
-# summary
-
-1. What multimodality enables
-
-direct use of screenshots, PDFs, audio, diagrams, images
-
-less manual preprocessing by the user
-
-broader automation surface
-
-2. What it does not mean
-
-not equal reliability across all formats
-
-not guaranteed exact extraction
-
-not “human-level seeing”
-
-not a replacement for structured data pipelines
-
-3. What good practice looks like
-
-use multimodal input for triage, summarization, and first-pass interpretation
-
-use extracted text / structured data for high-stakes decisions
-
-verify numbers, tables, charts, citations
-
-prefer source-preserving workflows
-
-
-So the practical hierarchy is often:
-
-raw modality → normalized text/structure → LLM reasoning
-
-Not because multimodality is bad, but because structured inputs are more controllable and auditable.
-
-
-# images
-
-Use multimodal input to speed up triage and interpretation, but not as a substitute for exact extraction when precision matters.
-
-
-# pdf
-
-2. A PDF is not “just a document”
-
-Very important for non-technical users.
-
-When people upload a PDF, they think they are giving the model “the report.”
-
-But a PDF may actually contain very different things:
-
-selectable text
-
-scanned images of text
-
-tables rendered visually
-
-charts
-
-footnotes, headers, sidebars, two-column layouts
-
-hidden OCR layers
-
-That is why the same model can:
-
-summarize one PDF very well
-
-completely miss key details in another
 
 
 

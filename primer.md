@@ -115,7 +115,15 @@ The mental model: each modality has its own translator that converts input into 
 
 PDFs deserve special mention: a PDF is not "just a document." It can contain selectable text, scanned images, tables, charts, multi-column layouts, and footnotes — all mixed together. In that sense, a PDF is often multimodal *itself*. That's why the same model can summarize one PDF perfectly and miss key details in another.
 
-**Rule of thumb:** Use multimodal input for triage, summarization, and first-pass interpretation. Use clean text or structured data when precision matters.
+**Where it goes wrong:**
+
+1. **Detail loss** — Small text, tiny numbers, blurry screenshots, dense tables. The root cause: images are compressed into a limited number of token-like units, so fine detail gets lost.
+2. **Structure confusion** — Rotated text, overlapping labels, complex layouts, table misalignment. The model receives a 1D sequence from a 2D layout, so spatial relationships are fragile.
+3. **Overconfidence** — The most dangerous one. The model doesn't say "I'm not sure about this number." It reads a chart value as 4.2M when it's actually 4.7M, and presents it with the same confidence as everything else. This is the failure mode that actually causes damage.
+
+The common thread: multimodal AI is not "human-level seeing." It's a lossy interpretation of visual information — powerful, but fundamentally different from how a person reads a document.
+
+**Rule of thumb:** Use multimodal input for triage, summarization, and first-pass interpretation. For high-stakes work, the practical pattern is: convert the raw input into clean text or structured data first, then let the model reason over that. Not because multimodality is bad, but because structured inputs are more controllable and auditable.
 
 *→ See [Under the Hood: From Pixels to Vectors](uth.md#from-pixels-to-vectors) for how images and text are converted into the vectors the LLM actually processes.*
 
