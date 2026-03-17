@@ -26,6 +26,10 @@
 
 - **Mintlify** — docs.anthropic.com, docs.cursor.com
 - **GitBook** — docs.snyk.io, docs.rocket.chat
+- Docusaurus
+- https://squidfunk.github.io/mkdocs-material/
+- simply github + gitbook?
+
 - **Fumadocs** — unkey.com/docs, fumadocs.dev
 - **Nextra** — langfuse.com/docs, swr.vercel.app
 - **Leanpub** — leanpub.com/fljs (Kyle Simpson), leanpub.com/exploring-es6 (Axel Rauschmayer)
@@ -35,3 +39,4 @@
 
 - gitbook
 - aigot.it
+- aiaiai.now, aiaiai.rocks, aiaiai.education
