@@ -35,8 +35,16 @@ pipeline vom foundation-model über das finetuning und alignment über preprompt
   - it's just the way i explain things to other people
   - and how i came to underatdn these systems after working with them for years (üi, ...)
 
+# simplifying
+
+- broad ai note at the end into start page?
+- delete some of the old files
+- diff branch with simplified version?
+- thgrough out glossary etc?
+
 # Todos
 
+- have security and api (and maybe other uth topics) as "horizontal" layers that go thrugh all the sections?
 - reasoning models the more correct term for thinking models?
 - link to https://platform.openai.com/tokenizer ?
 - check the subtitles in primer.md before ever deleting that file
