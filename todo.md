@@ -10,20 +10,6 @@
 - pseudocode
 - ...
 
-# later
-
-- images? ascii, mermaid, svg, excalidraw, ...?
-
-# review
-
-- panel with karpathy and others
-- factcheck
-
-
-# from beat
-
-pipeline vom foundation-model über das finetuning und alignment über preprompts bis zum fertigen chatbot (wer kann was entwickeln?)
-
 
 # what is it?
 
@@ -35,17 +21,12 @@ pipeline vom foundation-model über das finetuning und alignment über preprompt
   - it's just the way i explain things to other people
   - and how i came to underatdn these systems after working with them for years (üi, ...)
 
-# simplifying (done — March 2026)
-
-- simplified to 9 chapters + closing page, cut sections moved to `_drafts/`
-- broad ai note included in "What We Didn't Cover" closing page
-- glossary kept for now
 
 # Todos
 
-- reasoning models the more correct term for thinking models?
-- link to https://platform.openai.com/tokenizer ?
 - resolve MN comments in 02-multimodality.md (7 comments) and 09-context-engineering.md (10 comments) — DONE
+- resolve MN comments in _drafts/ (rag, security, trusting-output, routing, thinking-models — 18 comments) — DONE
+- renamed "Thinking Models" → "Reasoning Models" (industry-standard term, with parenthetical note)
 - future: "Diving Deeper" optional subsections (technical depth for curious readers). Content in _drafts/diving-deeper.md. May be collapsible/hidden in final format. Good for: internal mechanics, embeddings, encoding details, architecture concepts.
 - title decision (see candidates below)
 - consider: have security and api (and maybe other uth topics) as "horizontal" layers that go through all the sections?
@@ -105,3 +86,4 @@ Title candidates (from panel):
 - Add more sections from _drafts/, maybe split into different parts (as we had at some
   point in the past, see commit 5576fa187d186c9dadc6fb56fd0d92ed27782e3e)
 - Add links to other articles? (See also research-articles.md)
+- Link to https://platform.openai.com/tokenizer and/or similar tools?
