@@ -5,19 +5,19 @@
   │         CONTEXT WINDOW (e.g. 200K tokens)           │
   │                                                     │
   │  ┌─────────────────────────────────────────────┐    │
-  │  │  System Prompt (persona, rules, format)     │    │
+  │  │  System prompt (persona, rules, format)     │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Few-shot examples (sample Q&As that show   │    │
+  │  │  Few-shot examples (sample Q&As that show   │    │ MN maybe remove this part (few-shot examples)?
   │  │    the desired behavior — see section 4)    │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  RAG results (relevant documents)           │    │
+  │  │  RAG results (relevant documents)           │    │ MN rephrase because we don't have RAG any longer in the  current primzer?
   │  ├─────────────────────────────────────────────┤    │
   │  │  Images / file attachments                  │    │
   │  │  (visual data — converted to tokens)        │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Tool definitions (available tools)         │    │
+  │  │  Tool definitions (available tools)         │    │ MN part of the system prompt? at least mpve it up to immediately after system prompt?
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Conversation history (trimmed/filtered)    │    │
+  │  │  Conversation history (trimmed/filtered)    │    │ MN remove all teh notes in parens in the entire table?
   │  ├─────────────────────────────────────────────┤    │
   │  │  Tool results from previous steps           │    │
   │  ├─────────────────────────────────────────────┤    │
@@ -31,9 +31,9 @@
   └─────────────────────────────────────────────────────┘
 ```
 
-Everything we've covered — system prompt, RAG results, images, tool definitions, conversation history, thinking tokens — competes for the **same limited space** in the context window. The model also has its trained knowledge (the parameters from section 1), but at runtime, the context window is the *only* input you can control. If a fact isn't in the window and wasn't in the training data, it doesn't exist for the model.
+Everything we've covered — system prompt, RAG results (MN remove?), images, tool definitions, conversation history, thinking tokens — competes for the **same limited space** in the context window. The model also has its trained knowledge (the parameters from section 1), but at runtime, the context window is the *only* input you can control. If a fact isn't in the window and wasn't in the training data, it doesn't exist for the model.
 
-All of the machinery we've seen so far — the conversation management from section 3, the tool execution from section 6, the agentic loop from section 7 — is built by developers, not the LLM. The industry term for this surrounding code is the **harness**: everything *except* the LLM itself. The LLM is the engine. The harness is the car.
+All of the machinery we've seen so far — the conversation management from section 3, the tool execution from section 6, the agentic loop from section 7 — is built by developers, not the LLM. The industry term for this surrounding code is the **harness**: everything *except* the LLM itself. The LLM is the engine. The harness is the car. MN remove this para?
 
 **Context engineering** is the discipline of controlling what the model sees on every call — and what it doesn't. Concretely, it means designing across four dimensions:
 

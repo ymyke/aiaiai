@@ -2,7 +2,7 @@
 
 ```
   ┌──────────────────────────────────────────────────────┐
-  │  System Prompt:                                      │
+  │  System prompt:                                      │
   │  "You are a helpful assistant."                      │
   │                                                      │
   │  Available tools:                                    │
@@ -11,30 +11,30 @@
   ├──────────────────────────────────────────────────────┤
   │  User: "What's the weather in Tokyo?"                │
   └─────────────────────────┬────────────────────────────┘
-                         │
-                         ▼
-                  ┌─────────────┐
-                  │     LLM     │
-                  └─────────────┘
-                         │
-         Tool call: get_weather(city="Tokyo")
-                         │
-                         ▼
-              ┌─────────────────┐
-              │  Application    │──── actual API call
-              │  executes tool  │
-              └────────┬────────┘
-                       │
-                       ▼
-    Result: { temp: "28°C", condition: "humid" }
-                       │
-                       ▼
-                ┌─────────────┐
-                │     LLM     │
-                └─────────────┘
-                       │
-                       ▼
-   "It's currently 28°C and humid in Tokyo."
+                            │
+                            ▼
+                     ┌─────────────┐
+                     │     LLM     │
+                     └─────────────┘
+                            │
+            Tool call: get_weather(city="Tokyo")
+                            │
+                            ▼
+                   ┌─────────────────┐
+                   │  Application    │──── actual API call
+                   │  executes tool  │
+                   └────────┬────────┘
+                            │
+                            ▼
+         Result: { temp: "28°C", condition: "humid" }
+                            │
+                            ▼
+                     ┌─────────────┐
+                     │     LLM     │
+                     └─────────────┘
+                            │
+                            ▼
+        "It's currently 28°C and humid in Tokyo."
 ```
 
 

@@ -57,4 +57,4 @@ messages: [
 
 The "system" message sets behavior (more on that next). The "user" and "assistant" messages are the conversation turns. The roles serve a practical purpose: they let the model distinguish instructions to follow (system) from input to respond to (user) from its own prior responses to stay consistent with (assistant). This format is what every chatbot, API wrapper, and agent framework uses under the hood.
 
-These role labels are conventions the model learned during training — strong signals, but not hard rules. A sufficiently clever message in the "user" slot can override instructions from the "system" slot — a vulnerability called **prompt injection** (→ What We Didn't Cover).
+These role labels are conventions the model learned during training — strong signals, but not hard rules. A sufficiently clever message in the "user" slot can override instructions from the "system" slot — a vulnerability called **prompt injection** (→ What We Didn't Cover). (MN ditch this last para, esp bc we don't have the security section any longer?)
