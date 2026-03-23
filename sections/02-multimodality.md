@@ -78,7 +78,7 @@ A rough reliability ranking:
 | Audio (non-speech)            | Low — limited model support, unreliable           |
 | Video                         | Expensive and lossy                               |
 
-The common thread: multimodal AI is not "human-level seeing." It's a lossy compression of reality into tokens — powerful and convenient, but fundamentally different from how a person reads a document.
+The common thread: a multimodal model is not "human-level seeing." It's a lossy compression of reality into tokens — powerful and convenient, but fundamentally different from how a person reads a document.
 
 **Rule of thumb:** Use multimodal input for triage, summarization, and first-pass interpretation. For high-stakes work, convert the raw input into clean text or structured data first, then let the model reason over that. Not because multimodality is bad — it is improving rapidly — but because structured inputs are more controllable and auditable.
 

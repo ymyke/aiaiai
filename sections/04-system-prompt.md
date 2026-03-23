@@ -1,6 +1,6 @@
 # 4. The System Prompt — Programming Behavior
 
-In Section 2 we saw that the model receives a list of messages with roles. The system prompt is the first message in that list — written not by you, but by whoever built the product. It steers how the model behaves before you say a word, and it's where tool definitions, guardrails, and safety constraints live.
+In Section 3 we saw that the model receives a list of messages with roles. The system prompt is the first message in that list — written not by you, but by whoever built the product. It steers how the model behaves before you say a word, and it's where tool definitions, guardrails, and safety constraints live.
 
 ```
   ┌──────────────────────────────────────────────────────┐
@@ -18,6 +18,10 @@ In Section 2 we saw that the model receives a list of messages with roles. The s
 ```
 
 A plain LLM is a general-purpose engine. A chatbot gives it memory. The system prompt gives it a *mission* — a role, rules, and tools, all specified in ordinary language by whoever built the product. Structured output, tool use, autonomous loops: each of these capabilities, introduced in the sections ahead, is essentially a new instruction added to this message. The system prompt is where human intent steers model behavior — in plain language, not code.
+
+This is a fundamental shift. In traditional software, shaping behavior requires formal code — precise syntax that a compiler or interpreter executes literally. Here, the programming language is English (or German, or any natural language). The instruction "Be concise and never recommend competitors" achieves what would take many lines of traditional code. Anyone who can write clear prose can program an AI system's behavior — no developer required.
+
+The trade-off is ambiguity. A compiler rejects unclear instructions. An LLM interprets them — and sometimes interprets them differently than you intended. When your "code" is natural language, precision takes deliberate effort. This is part of why context engineering (section 9) is a discipline, not an afterthought.
 
 A typical system prompt defines:
 - **Persona and tone** — "You are a concise travel assistant" vs. "You are a friendly tutor who explains step by step"

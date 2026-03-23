@@ -1,5 +1,7 @@
 # 1. The Plain LLM — The Foundation
 
+The AI products you use daily — ChatGPT, Claude, Gemini, and the like — are all powered by a Large Language Model, or LLM: the engine under the hood that this primer takes apart, layer by layer.
+
 ```
         "The capital of France is"
                        │
@@ -12,9 +14,11 @@
                     "Paris."
 ```
 
-A Large Language Model is, at its core, a text continuation engine: given some text, it produces the most likely next piece of text, token by token. No memory, no knowledge updates after training, no logic in the classical sense — just extraordinarily good pattern recognition over language. It doesn't "answer questions" — it continues text. That it *appears* to answer questions is because a question followed by a good answer is the most likely continuation.
+An LLM is, at its core, a text continuation engine: given some text, it produces the most likely next piece of text, token by token. No memory, no knowledge updates after training, no logic in the classical sense — just extraordinarily good pattern recognition over language. It doesn't "answer questions" — it continues text. That it *appears* to answer questions is because a question followed by a good answer is the most likely continuation.
 
 A single LLM call is *stateless* — after each response, the model has complete amnesia. It knows nothing about any previous call. This single fact explains why chatbots resend the entire conversation every time (section 3).
+
+One consequence of "pattern recognition over language" is easy to miss: nobody programmed the model to write poetry, debug code, or summarize legal contracts. These capabilities *emerged* from training on vast amounts of text — they were discovered, not designed. This is fundamentally different from traditional software, where every feature is explicitly built and individually tested. It explains why LLMs can do surprising things nobody anticipated — and fail in equally surprising ways nobody predicted.
 
 **Key concepts:**
 
@@ -22,6 +26,8 @@ A single LLM call is *stateless* — after each response, the model has complete
 - **Context Window** — How much text the model can "see" at once. Measured in tokens. Current models range from ~100K to over a million tokens. Everything outside the window — prior messages, documents not included — is invisible to the model for that call.
 - **Temperature** — The creativity dial. 0 = deterministic (always the most likely answer). 1 = creative/random. Most products default to somewhere in the middle. Low for code and factual tasks, higher for brainstorming and creative writing.
 - **Training vs. Inference** — Training: the model learns from data (months, millions of $). Inference: the model answers a question (milliseconds, cents).
+
+The temperature parameter hints at something deeper: **an LLM is a probability machine.** Every response is a fresh sample from a distribution of likely continuations. Given the same input, it can produce different output every time. This is unlike every other piece of software you've used — a spreadsheet, a search engine, a calculator all give identical results for identical input. An LLM doesn't. This single property shapes everything about how AI products are built, and — as we'll see in section 6 — how developers work around it.
 
 
 <!-- *→ See [Under the Hood: The API Call](../uth.md#the-api-call) for what an LLM call actually looks like in code.* -->

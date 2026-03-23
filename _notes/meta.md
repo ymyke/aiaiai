@@ -40,6 +40,18 @@ Each numbered section should be **self-contained** and explain the most importan
 - Keep it concrete — real examples over abstract explanations
 - Disclaimer up front: this guide deliberately simplifies
 
+## Vocabulary: What the LLM produces
+
+| Term | Use when... |
+|------|-------------|
+| **"continuation"** | Section 1 only, explaining the base prediction mechanism |
+| **"response"** | Default from section 2 onward, conversational contexts |
+| **"output"** | Technical contexts, failure modes, hallucinations, trust |
+| **"result"** | Data returned by tools/APIs — never for the model's own text |
+| ~~"answer"~~ | Avoid — implies correctness and authority |
+
+Bridge in section 1: transition explicitly from "continuation" (mechanism) to "response" (experience). Brief glossary note mapping to industry terms readers may encounter elsewhere ("completion," "generation").
+
 ## Examples
 
 - **Concrete over generic.** "Summarize these 12 restaurant reviews" beats "Summarize this document." Vivid scenarios the reader can picture.

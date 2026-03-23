@@ -1,11 +1,11 @@
 # AI Primer
 
-*This guide deliberately simplifies. Some details are omitted, some analogies are imperfect. The goal is a useful mental model, not a textbook.*
+*Under the hood of the AI systems you use every day.*
 
----
+You've been using ChatGPT, Claude, or Gemini long enough to have intuitions — what works, what doesn't, when the model seems brilliant and when it falls apart. But the system behind the text box is still a mystery.
 
-When you use an AI chatbot, it looks like one thing: a text box that gives you answers. Under the surface, there are several ideas stacked on top of each other — each one unlocking capabilities the previous ones couldn't.
+This primer opens it up. Nine short chapters, each building on the last: how a text predictor becomes a chatbot. How a chatbot gains tools. How tools enable autonomous agents. And the finite context window that governs them all.
 
-This primer takes them apart, layer by layer: from a stateless text predictor to multimodal input, conversational memory, system prompts, tool use, autonomous agents, multi-agent systems, and the finite context window that constrains them all. By the end, you'll understand not just what AI can do, but *why* — and where the limits come from.
+By the end, you'll know why the model "forgets" what you said ten messages ago, why it's confident when it's wrong, and what's actually happening when an AI agent books a flight or writes code on your behalf.
 
----
+*This primer deliberately simplifies. The goal is a useful mental model, not a textbook.*
