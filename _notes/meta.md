@@ -59,6 +59,17 @@ Mental model gap notes for each topic are embedded as HTML comments in the respe
 
 See [panel.md](panel.md) — content panel (what to teach, how to teach it) and fact-check panel (technical accuracy).
 
+## Diagrams
+
+- **Format:** ASCII art using box-drawing characters (`┌─┐│└─┘`, arrows `▼ ▶ ◀ │ ─`)
+- **Max width:** 80 characters (including leading indent)
+- **Left indent:** 2 spaces
+- **LLM box:** always `│     LLM     │` (13 chars wide), centered in the flow
+- **Labels:** spell out fully — no hyphenation across lines
+- **Side-by-side layouts:** use the full 80-char width to let them breathe
+- **No emojis** in diagrams (consistent with prose style)
+- **Cross-references** in diagrams: use "section N" (not §)
+
 ## Publishing
 
 The primer is published via GitBook, driven by `SUMMARY.md`.

@@ -3,27 +3,27 @@
 ```
   User: "Plan a birthday party for 30 people:
          find a venue, plan the menu, create invitations."
-                     │
-                     ▼
-         ┌───────────────────────┐
-         │   Orchestrator Agent  │
-         │   (plans & delegates) │
-         └───┬─────┬─────┬───────┘
-             │     │     │
-             ▼     ▼     ▼
-         ┌─────┐┌─────┐┌──────┐
-         │Venue││Menu ││Invi- │    ◄── Subagents
-         │find ││plan ││tation│        (each with own loop,
-         └──┬──┘└──┬──┘└──┬───┘         own context, own tools)
-            │      │      │
-            ▼      ▼      ▼
-         ┌───────────────────────┐
-         │   Orchestrator Agent  │
-         │   (synthesizes)       │
-         └───────────────────────┘
-                     │
-                     ▼
-            Complete party plan
+                            │
+                            ▼
+        ┌───────────────────────────────────────┐
+        │          Orchestrator Agent           │
+        │          (plans & delegates)          │
+        └────┬────────────┬──────────────┬──────┘
+             │            │              │
+             ▼            ▼              ▼
+        ┌──────────┐ ┌──────────┐ ┌─────────────┐
+        │  Venue   │ │   Menu   │ │ Invitations │  ◄── Subagents
+        │  Finder  │ │ Planner  │ │   Creator   │      (each with own loop,
+        └────┬─────┘ └────┬─────┘ └──────┬──────┘      own context, own tools)
+             │            │              │
+             ▼            ▼              ▼
+        ┌───────────────────────────────────────┐
+        │          Orchestrator Agent           │
+        │          (synthesizes)                │
+        └───────────────────────────────────────┘
+                            │
+                            ▼
+                   Complete party plan
 ```
 
 You've seen that every LLM call has a limited context window, and that irrelevant context can hurt quality. So what happens when a task has parts that don't need to see each other?

@@ -9,14 +9,14 @@ The LLM from Section 1 has no memory — each call starts from zero. A chatbot c
   └────────┬─────────┘              │ Assistant: "Hello Max!"          │
            │                        │ User: "What's my name?"          │
            ▼                        └────────────────┬─────────────────┘
-    ┌─────────────┐                                 │
-    │     LLM     │                                ▼
-    └─────────────┘                         ┌─────────────┐
-           │                                │     LLM     │
-           ▼                                └─────────────┘
-    "Hello Max!"                                   │
-                                                   ▼
-                                            "Your name is Max."
+    ┌─────────────┐                                  │
+    │     LLM     │                                  ▼
+    └─────────────┘                           ┌─────────────┐
+           │                                  │     LLM     │
+           ▼                                  └─────────────┘
+    "Hello Max!"                                     │
+                                                     ▼
+                                              "Your name is Max."
 ```
 
 Look at Round 2 in the diagram above: the application doesn't just send the new question — it resends the entire conversation so far. The model sees "I'm Max," its own reply, and only then the follow-up question. This bundled history is the reason it can answer correctly.

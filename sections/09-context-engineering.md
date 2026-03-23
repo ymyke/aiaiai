@@ -2,29 +2,32 @@
 
 ```
   ┌─────────────────────────────────────────────────────┐
-  │              CONTEXT WINDOW (e.g. 200K tokens)       │
-  │                                                      │
+  │         CONTEXT WINDOW (e.g. 200K tokens)           │
+  │                                                     │
   │  ┌─────────────────────────────────────────────┐    │
-  │  │  System Prompt (persona, rules, format)      │    │
+  │  │  System Prompt (persona, rules, format)     │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Few-shot examples (sample Q&As showing      │    │
-  │  │    the model the desired behavior — see section 4)   │    │
+  │  │  Few-shot examples (sample Q&As that show   │    │
+  │  │    the desired behavior — see section 4)    │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  RAG results (relevant documents)            │    │
+  │  │  RAG results (relevant documents)           │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Images / file attachments                   │    │
-  │  │  (visual data — converted to tokens)         │    │
+  │  │  Images / file attachments                  │    │
+  │  │  (visual data — converted to tokens)        │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Tool definitions (available tools)          │    │
+  │  │  Tool definitions (available tools)         │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Conversation history (trimmed/filtered)     │    │
+  │  │  Conversation history (trimmed/filtered)    │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Tool results from previous steps            │    │
+  │  │  Tool results from previous steps           │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Current user message                        │    │
+  │  │  Current user message                       │    │
   │  └─────────────────────────────────────────────┘    │
-  │                                                      │
-  │  ▒▒▒▒▒▒▒▒▒▒▒▒ free space for output ▒▒▒▒▒▒▒▒▒▒▒▒  │
+  │                                                     │
+  │  ·················································  │
+  │  ············· free space for output ·············  │
+  │  ·················································  │
+  │                                                     │
   └─────────────────────────────────────────────────────┘
 ```
 

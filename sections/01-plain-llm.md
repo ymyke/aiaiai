@@ -30,16 +30,14 @@ A single LLM call is *stateless* — after each response, the model has complete
 
 ```
   "Strawberry fields forever"
-                │
-                ▼
-        ┌── Tokenizer ──┐
-        │                │
-        ▼                ▼
-  ["Str", "aw",         ["2645", "675",
-   "berry",              "15717",
-   " fields",            "5765",
-   " forever"]           "8901"]
-   (Tokens)             (Token IDs)
+               │
+               ▼
+  ["Str", "aw", "berry", " fields", " forever"]
+  (Tokens)
+               │
+               ▼
+  [2645, 675, 15717, 5765, 8901]
+  (Token IDs — what the model sees)
 ```
 
 Before the LLM processes anything, text is split into **tokens** — word fragments with numeric IDs. The model never sees raw text — it sees only these fragments. This seems like a technical detail, but it has big consequences.
