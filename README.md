@@ -8,4 +8,4 @@ This primer opens it up. Nine short chapters, each building on the last: how a t
 
 By the end, you'll know why the model "forgets" what you said ten messages ago, why it's confident when it's wrong, and what's actually happening when an AI agent books a flight or writes code on your behalf.
 
-*This primer deliberately simplifies. The goal is a useful mental model, not a textbook.*
+*This grew out of years of working with these systems and explaining them to the people around me. It deliberately simplifies — the goal is a useful mental model, not a textbook.*
