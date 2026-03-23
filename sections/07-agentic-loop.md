@@ -47,7 +47,7 @@ In Section 5, the model made a single tool call and turned the result into an an
 
 An agent runs the same cycle repeatedly. It calls a tool, reads the result, decides what to do next, calls another tool, and keeps going until the task is done. In the example above, the model first looks up your office address, then searches for nearby Italian restaurants, then checks which ones have outdoor seating tonight, then checks availability at 7pm, and finally makes the reservation — five tool calls, each one informed by the previous result.
 
-Mechanically, that's all there is to it. The LLM proposes a tool call. The application executes it and feeds the result back into the conversation — the same mechanism as the chat history from §3. The LLM sees the updated conversation, decides whether the task is done or another step is needed, and if so, makes the next call.
+Mechanically, that's all there is to it. The LLM proposes a tool call. The application executes it and feeds the result back into the conversation — the same mechanism as the chat history from section 3. The LLM sees the updated conversation, decides whether the task is done or another step is needed, and if so, makes the next call.
 
 The application sets guardrails to keep the loop in check: a maximum number of steps, a timeout, a cost budget, and often a requirement for human approval before high-impact actions like sending messages or spending money. Without guardrails, a confused agent could loop indefinitely or run up real costs.
 
@@ -65,6 +65,6 @@ Products like ChatGPT, Google's Gemini agents, Claude Code, Cursor, or OpenClaw 
 
 OpenClaw, which went from zero to the most-starred project on GitHub in early 2026, is a clear example: the underlying technology is the same loop you just learned about — what made it take off was which tools it gave the model and where it ran (your own computer, inside your messaging apps). It also illustrates why guardrails matter: OpenClaw gives the model very wide access to the system it runs on by default — files, shell, messaging, browsing — which is what makes it powerful, but also what makes the "what tools does it have?" question so important.
 
-Some agents also maintain memory across sessions — not because the LLM remembers, but because the application stores notes and loads them into context next time (the same illusion from §3, at a larger scale).
+Some agents also maintain memory across sessions — not because the LLM remembers, but because the application stores notes and loads them into context next time (the same illusion from section 3, at a larger scale).
 
 When someone says "we're deploying an agent," the first question to ask is: *what tools does it have?* That tells you more about what it can do — and what can go wrong — than any other single detail.

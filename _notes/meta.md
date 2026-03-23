@@ -8,7 +8,7 @@ People *using* AI systems, not people building them. Average white-collar worker
 
 ### Nine Chapters + Closing Page
 
-A dependency chain from simple LLM to autonomous multi-agent systems, with two additions: Multimodality (a branch extending the token concept from §1) and Context Engineering (a synthesis chapter tying everything together).
+A dependency chain from simple LLM to autonomous multi-agent systems, with two additions: Multimodality (a branch extending the token concept from section 1) and Context Engineering (a synthesis chapter tying everything together).
 
 | # | Section | Role |
 |---|---------|------|

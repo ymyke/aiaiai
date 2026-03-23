@@ -8,7 +8,7 @@
   │  │  System Prompt (persona, rules, format)      │    │
   │  ├─────────────────────────────────────────────┤    │
   │  │  Few-shot examples (sample Q&As showing      │    │
-  │  │    the model the desired behavior — see §4)   │    │
+  │  │    the model the desired behavior — see section 4)   │    │
   │  ├─────────────────────────────────────────────┤    │
   │  │  RAG results (relevant documents)            │    │
   │  ├─────────────────────────────────────────────┤    │
@@ -28,9 +28,9 @@
   └─────────────────────────────────────────────────────┘
 ```
 
-Everything we've covered — system prompt, RAG results, images, tool definitions, conversation history, thinking tokens — competes for the **same limited space** in the context window. The model also has its trained knowledge (the parameters from §1), but at runtime, the context window is the *only* input you can control. If a fact isn't in the window and wasn't in the training data, it doesn't exist for the model.
+Everything we've covered — system prompt, RAG results, images, tool definitions, conversation history, thinking tokens — competes for the **same limited space** in the context window. The model also has its trained knowledge (the parameters from section 1), but at runtime, the context window is the *only* input you can control. If a fact isn't in the window and wasn't in the training data, it doesn't exist for the model.
 
-All of the machinery we've seen so far — the conversation management from §3, the tool execution from §6, the agentic loop from §7 — is built by developers, not the LLM. The industry term for this surrounding code is the **harness**: everything *except* the LLM itself. The LLM is the engine. The harness is the car.
+All of the machinery we've seen so far — the conversation management from section 3, the tool execution from section 6, the agentic loop from section 7 — is built by developers, not the LLM. The industry term for this surrounding code is the **harness**: everything *except* the LLM itself. The LLM is the engine. The harness is the car.
 
 **Context engineering** is the discipline of controlling what the model sees on every call — and what it doesn't. Concretely, it means designing across four dimensions:
 

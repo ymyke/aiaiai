@@ -37,7 +37,7 @@ But to use multimodality well, it helps to understand what's actually happening 
 
 LLMs work on sequences of token-like units — always. Every input, regardless of type, must be translated into that format before the model can process it.
 
-For text, this is straightforward. Language is already sequential: words follow words, sentences follow sentences. The tokenizer (see §1) splits text into fragments, and the model processes them in order. This is the LLM's native mode.
+For text, this is straightforward. Language is already sequential: words follow words, sentences follow sentences. The tokenizer (see section 1) splits text into fragments, and the model processes them in order. This is the LLM's native mode.
 
 For everything else — images, audio, video, PDFs — the input first needs to be *translated and compressed* into a sequence of token-like units. This is where things can go wrong.
 
