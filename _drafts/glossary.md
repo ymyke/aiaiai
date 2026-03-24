@@ -9,7 +9,7 @@
 | **Embedding**           | Numeric vector representation of text (or images, audio)             |
 | **RAG**                 | Retrieval Augmented Generation — external knowledge at runtime       |
 | **Fine-Tuning**         | Retraining a model on custom data                                    |
-| **Harness**             | All application code around the LLM (loop, tools, RAG, routing)      |
+| **Application (around the model)** | All code around the LLM: conversation management, tool execution, context assembly, guardrails. Engineers use overlapping terms including "application layer," "orchestration layer," "harness," and "stack." |
 | **Context Engineering** | The discipline of optimally filling the context window on every call |
 | **Prompt Engineering**  | Popular term for writing effective prompts — this primer uses the broader term Context Engineering (section 9) |
 | **Few-Shot**            | Examples in the prompt to demonstrate desired behavior               |
