@@ -30,7 +30,7 @@
                       Text
 ```
 -->
-![02-multimodality-diagram1](../images/02-multimodality-diagram1.png)
+![](../images/02-multimodality-diagram1.png)
 
 Section 1 showed that LLMs process everything as tokens. That's true even when the input is an image, a PDF, or an audio recording. **Multimodal models** can analyze images, read PDFs, and transcribe audio — you can ask a model to summarize a slide deck, inspect a screenshot, read a diagram, or transcribe a meeting recording, all directly.
 

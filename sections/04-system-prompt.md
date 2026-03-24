@@ -18,7 +18,7 @@ In Section 3 we saw that the model receives a list of messages with roles. The s
                       └─────────────┘
 ```
 -->
-![04-system-prompt-diagram1](../images/04-system-prompt-diagram1.png)
+![](../images/04-system-prompt-diagram1.png)
 
 A plain LLM is a general-purpose engine. A chatbot gives it memory. The system prompt gives it a *mission* — a role, rules, and tools, all specified in ordinary language by whoever built the product. The system prompt is where human intent steers model behavior — in plain language, not code.
 

@@ -38,7 +38,7 @@
         "It's currently 28°C and humid in Tokyo."
 ```
 -->
-![06-tool-use-diagram1](../images/06-tool-use-diagram1.png)
+![](../images/06-tool-use-diagram1.png)
 
 
 **Behind the scenes — what the LLM sees at each step:**
@@ -57,7 +57,7 @@ Step 2:  [system: "...", tools: [...],
               → LLM responds with: "It's currently 28°C and humid in Tokyo."
 ```
 -->
-![06-tool-use-diagram2](../images/06-tool-use-diagram2.png)
+![](../images/06-tool-use-diagram2.png)
 
 The LLM doesn't execute tools itself. It only decides *which* tool to call with *which* parameters. The application around the LLM performs the actual call and feeds the result back.
 

@@ -30,7 +30,7 @@
   └─────────────────────────────────────────────────────┘
 ```
 -->
-![09-context-engineering-diagram1](../images/09-context-engineering-diagram1.png)
+![](../images/09-context-engineering-diagram1.png)
 
 Everything we've covered — system prompt, retrieved documents, images, tool definitions, conversation history, thinking tokens — competes for the **same limited space** in the context window. The model also has its trained knowledge (the parameters from section 1), but at runtime, the context window is the *only* input you can control. If a fact isn't in the window and wasn't in the training data, it doesn't exist for the model.
 

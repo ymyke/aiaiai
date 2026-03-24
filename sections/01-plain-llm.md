@@ -15,7 +15,7 @@ The AI products you use daily — ChatGPT, Claude, Gemini, and the like — are 
                     "Paris."
 ```
 -->
-![01-plain-llm-diagram1](../images/01-plain-llm-diagram1.png)
+![](../images/01-plain-llm-diagram1.png)
 
 An LLM is, at its core, a text continuation engine: given some text, it produces the most likely next piece of text, token by token. No memory, no knowledge updates after training, no logic in the classical sense — just extraordinarily good pattern recognition over language. It doesn't "answer questions" — it continues text. That it *appears* to answer questions is because a question followed by a good answer is the most likely continuation.
 
@@ -48,7 +48,7 @@ The temperature parameter hints at something deeper: **an LLM is a probability m
   (Token IDs — what the model sees)
 ```
 -->
-![01-plain-llm-diagram2](../images/01-plain-llm-diagram2.png)
+![](../images/01-plain-llm-diagram2.png)
 
 Before the LLM processes anything, text is split into **tokens** — word fragments with numeric IDs. The model never sees raw text — it sees only these tokens. This seems like a technical detail, but it has big consequences.
 

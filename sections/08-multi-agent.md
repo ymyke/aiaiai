@@ -27,7 +27,7 @@
                    Complete party plan
 ```
 -->
-![08-multi-agent-diagram1](../images/08-multi-agent-diagram1.png)
+![](../images/08-multi-agent-diagram1.png)
 
 Some tasks have parts that benefit from separate attention — different expertise, different tools, or simply too much information for one context window. Instead of one agent doing everything, the work is split. The orchestrator agent delegates each subtask to a **subagent** — a separate agent with its own context window, its own tools, and its own agentic loop. The menu planner never sees the venue research. Each subagent returns its result, and the orchestrator combines them into a final answer.
 

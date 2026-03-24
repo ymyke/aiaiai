@@ -12,9 +12,9 @@
     │    ┌─────────┐            ┌──────────┐  │
     │    │         │   tool     │          │  │
     │    │   LLM   │   call     │   App    │  │
-    │    │         │ ────────▶ │  (runs   │  │
+    │    │         │ ────────▶  │  (runs   │  │
     │    │         │            │   tool)  │  │
-    │    │         │ ◀──────── │          │  │
+    │    │         │ ◀────────  │          │  │
     │    └─────────┘   result   └──────────┘  │
     │                                         │
     │    Repeats until done                   │
@@ -27,7 +27,7 @@
           table for 2, outdoor terrace."
 ```
 -->
-![07-agentic-loop-diagram1](../images/07-agentic-loop-diagram1.png)
+![](../images/07-agentic-loop-diagram1.png)
 
 **Behind the scenes — the conversation grows with each loop:**
 
@@ -47,7 +47,7 @@ Step 3:  [..., tool: { results: ["Trattoria Bella", "Casa Napoli", ...] }]
   ... continues until reservation is confirmed.
 ```
 -->
-![07-agentic-loop-diagram2](../images/07-agentic-loop-diagram2.png)
+![](../images/07-agentic-loop-diagram2.png)
 
 In Section 5, the model made a single tool call and turned the result into an answer. That was one round.
 
