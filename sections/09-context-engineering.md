@@ -5,19 +5,17 @@
   │         CONTEXT WINDOW (e.g. 200K tokens)           │
   │                                                     │
   │  ┌─────────────────────────────────────────────┐    │
-  │  │  System prompt (persona, rules, format)     │    │
+  │  │  System prompt                              │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Few-shot examples (sample Q&As that show   │    │ MN maybe remove this part (few-shot examples)?
-  │  │    the desired behavior — see section 4)    │    │
+  │  │  Tool definitions                           │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  RAG results (relevant documents)           │    │ MN rephrase because we don't have RAG any longer in the  current primzer?
+  │  │  Examples                                   │    │
+  │  ├─────────────────────────────────────────────┤    │
+  │  │  Retrieved documents                        │    │
   │  ├─────────────────────────────────────────────┤    │
   │  │  Images / file attachments                  │    │
-  │  │  (visual data — converted to tokens)        │    │
   │  ├─────────────────────────────────────────────┤    │
-  │  │  Tool definitions (available tools)         │    │ MN part of the system prompt? at least mpve it up to immediately after system prompt?
-  │  ├─────────────────────────────────────────────┤    │
-  │  │  Conversation history (trimmed/filtered)    │    │ MN remove all teh notes in parens in the entire table?
+  │  │  Conversation history                       │    │
   │  ├─────────────────────────────────────────────┤    │
   │  │  Tool results from previous steps           │    │
   │  ├─────────────────────────────────────────────┤    │
@@ -31,9 +29,9 @@
   └─────────────────────────────────────────────────────┘
 ```
 
-Everything we've covered — system prompt, RAG results (MN remove?), images, tool definitions, conversation history, thinking tokens — competes for the **same limited space** in the context window. The model also has its trained knowledge (the parameters from section 1), but at runtime, the context window is the *only* input you can control. If a fact isn't in the window and wasn't in the training data, it doesn't exist for the model.
+Everything we've covered — system prompt, retrieved documents, images, tool definitions, conversation history, thinking tokens — competes for the **same limited space** in the context window. The model also has its trained knowledge (the parameters from section 1), but at runtime, the context window is the *only* input you can control. If a fact isn't in the window and wasn't in the training data, it doesn't exist for the model.
 
-All of the machinery we've seen so far — the conversation management from section 3, the tool execution from section 6, the agentic loop from section 7 — is built by developers, not the LLM. The industry term for this surrounding code is the **harness**: everything *except* the LLM itself. The LLM is the engine. The harness is the car. MN remove this para?
+All of the machinery we've seen so far — the conversation management from section 3, the tool execution from section 6, the agentic loop from section 7 — is built by developers, not the LLM. This is the application around the model: everything *except* the LLM itself. The LLM is the engine; the application is the rest of the car. Engineers use several overlapping terms for this layer — "application layer," "orchestration layer," "harness," sometimes "the stack." They all describe aspects of the same basic idea: code that surrounds and directs the model. 
 
 **Context engineering** is the discipline of controlling what the model sees on every call — and what it doesn't. Concretely, it means designing across four dimensions:
 
@@ -49,5 +47,5 @@ All of the machinery we've seen so far — the conversation management from sect
 - Attaching images = richer understanding, but a single high-res image can consume thousands of tokens
 - For agents: every loop step fills the context with tool results — after 20 steps the context can be full. This is why agents sometimes "lose track" mid-task or repeat themselves — earlier instructions or observations have been pushed out by newer tool results. Agent-builders spend enormous effort on managing this: truncating tool outputs, summarizing intermediate steps, deciding what the model really needs to see 
 
-What's commonly called "Prompt Engineering" — techniques like providing examples, chain-of-thought reasoning, or careful phrasing — is real and useful. But for most AI products, the prompt you type is a small fraction of what determines output quality. The rest is system prompts, retrieved documents, tool definitions, conversation history, and thinking tokens — all managed automatically by the harness. That's why the more precise term is **context engineering**: it's not just about your prompt, it's about everything the model sees.
+What's commonly called "Prompt Engineering" — techniques like providing examples, chain-of-thought reasoning, or careful phrasing — is real and useful. But for most AI products, the prompt you type is a small fraction of what determines output quality. The rest is system prompts, retrieved documents, tool definitions, conversation history, and thinking tokens — all managed automatically by the application around the model. That's why the more precise term is **context engineering**: it's not just about your prompt, it's about everything the model sees.
 

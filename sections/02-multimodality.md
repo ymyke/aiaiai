@@ -49,13 +49,13 @@ For everything else — images, audio, video, PDFs — the input first needs to 
 
 **Video** is the hardest — it's 2D images *plus* time. The token cost is enormous, and most systems can only process short clips or heavily sampled frames.
 
-**PDFs** deserve special mention. A PDF is not "just a document." It can contain selectable text, scanned pages (images of text that aren't machine-readable (MN aren't directly machine-readable, need OCR, ...?)), charts, photos, tables, multi-column layouts, and footnotes — all mixed together. In that sense, a PDF is often multimodal *itself*. That's why the same model (MN use AI system here or whatever the final terminoilogy will be, but model seems wrong?) can summarize one PDF perfectly, miss key details in another, or sometimes fail altogether.
+**PDFs** deserve special mention. A PDF is not "just a document." It can contain selectable text, scanned pages (images of text that you can't select or search), charts, photos, tables, multi-column layouts, and footnotes — all mixed together. In that sense, a PDF is often multimodal *itself*. That's why the same AI system can summarize one PDF perfectly, miss key details in another, or sometimes fail altogether.
 
 ### The layout problem
 
 There's a deeper challenge: the real world is often 2D, 3D, or temporal — but the model consumes a 1D sequence of tokens. A page has rows and columns. A chart has axes and overlapping labels. A table has spatial structure. All of that must be flattened into a single stream.
 
-This is why spatial relationships are fragile. The model may read a chart's trend correctly but confuse which label belongs to which bar. Or it may parse a table but mix up columns. The richer the original layout, the harder the compression. (MN the "harder"? The lossier? ...?)
+This is why spatial relationships are fragile. The model may read a chart's trend correctly but confuse which label belongs to which bar. Or it may parse a table but mix up columns. The richer the original layout, the harder the compression.
 
 ### Where it goes wrong
 
@@ -80,6 +80,6 @@ A rough reliability ranking:
 
 The common thread: a multimodal model is not "human-level seeing." It's a lossy compression of reality into tokens — powerful and convenient, but fundamentally different from how a person reads a document.
 
-**Rule of thumb:** Use multimodal input for triage, summarization, and first-pass interpretation. (MN or: the "closer" to text, the better for the LLM? or so?) For high-stakes work, convert the raw input into clean text or structured data first, then let the model reason over that. Not because multimodality is bad — it is improving rapidly — but because structured inputs are more controllable and auditable.
+**Rule of thumb:** The closer your input is to clean text, the more reliably the model handles it — text is its native mode. Use multimodal input for triage, summarization, and first-pass interpretation. For high-stakes work, convert the raw input into clean text or structured data first, then let the model reason over that. Not because multimodality is bad — it is improving rapidly — but because structured inputs are more controllable and auditable.
 
 With the token foundation extended to all input types, Section 3 turns to a different question: how does the LLM remember what you said five minutes ago?

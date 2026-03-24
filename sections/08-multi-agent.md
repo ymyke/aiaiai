@@ -26,9 +26,7 @@
                    Complete party plan
 ```
 
-You've seen that every LLM call has a limited context window, and that irrelevant context can hurt quality. So what happens when a task has parts that don't need to see each other? MN this opening seems oddly specific? aren0t there more obvious reasons why subagents exist?
-
-The system splits it. The orchestrator agent delegates each subtask to a **subagent** — a separate agent with its own context window, its own tools, and its own agentic loop. The menu planner never sees the venue research. Each subagent returns its result, and the orchestrator combines them into a final answer.
+Some tasks have parts that benefit from separate attention — different expertise, different tools, or simply too much information for one context window. Instead of one agent doing everything, the work is split. The orchestrator agent delegates each subtask to a **subagent** — a separate agent with its own context window, its own tools, and its own agentic loop. The menu planner never sees the venue research. Each subagent returns its result, and the orchestrator combines them into a final answer.
 
 **What this means for you:**
 - **Better results on complex tasks** — each subtask gets the model's full, focused attention instead of competing for space in one crowded context window.
