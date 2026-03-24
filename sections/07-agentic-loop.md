@@ -65,6 +65,6 @@ A concrete example: ask an agent to "plan a weekend trip to Copenhagen." With on
 
 The AI products you use daily are, at their core, this same loop — what differs is which tools they have and where they run.
 
-OpenClaw, which became the most-starred project on GitHub in under two months in early 2026, is a clear example: the underlying technology is the same loop you just learned about — what made it take off was which tools it gave the model and where it ran (your own computer, inside your messaging apps). It also illustrates why guardrails matter: OpenClaw gives the model very wide access to the system it runs on by default — files, shell, messaging, browsing — which is what makes it powerful, but also what makes it risky.
+OpenClaw, which became the most-starred project on GitHub in under two months in early 2026, is a clear example: the underlying technology is the same loop from the previous section — what made it take off was which tools it gave the model and where it ran (your own computer, inside your messaging apps). It also illustrates why guardrails matter: OpenClaw gives the model very wide access to the system it runs on by default — files, shell, messaging, browsing — which is what makes it powerful, but also what makes it risky.
 
 When someone says "we're deploying an agent," the first question to ask is: *what tools does it have?* That tells you more about what it can do — and what can go wrong — than any other single detail.

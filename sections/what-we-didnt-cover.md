@@ -6,7 +6,7 @@ This primer focuses on the evolution from a plain LLM to autonomous agents — a
 
 - **RAG (Retrieval Augmented Generation)** — Most AI products you use at work — "chat with your documents," knowledge bases, support bots — retrieve relevant text at runtime and inject it into the prompt. The model only knows its training data; RAG gives it access to yours.
 
-- **Trusting the Output** — LLMs hallucinate facts, fabricate sources, and confirm whatever bias you bring — all with the same confident tone. The verification rule: if you can't verify the output, don't automate the task.
+- **Trusting the Output** — LLMs hallucinate facts, fabricate sources, and confirm whatever biases are already present — all with the same confident tone. The verification rule: if you can't verify the output, don't automate the task.
 
 - **Security & Risks** — Prompt injection is an unsolved problem: content the AI reads can hijack its behavior. Agents with access to your email, calendar, and files can do real damage if manipulated. The principle of least privilege applies.
 

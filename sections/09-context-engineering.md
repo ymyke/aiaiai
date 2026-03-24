@@ -40,7 +40,7 @@ All of the machinery we've seen so far — the conversation management from sect
 - **In what order:** Position matters. Models pay the most attention to the beginning and end of the context, and less to the middle — a well-documented pattern called the "Lost in the Middle" effect. This is why system prompts go at the very start. For long prompts, placing your most important instructions at the beginning and repeating key points near the end can noticeably improve results.
 - **In what format:** The same knowledge, structured differently, can produce dramatically different results.
 
-**Why this matters to you in practice:**
+**Why this matters in practice:**
 - More RAG context = better informed, but less room for conversation
 - More tool definitions = more versatile, but the model gets less decisive about which to pick
 - Longer conversation history = more continuity, but higher cost and eventually quality degrades. That 50-message conversation? It's consuming context that could hold instructions or reference material
