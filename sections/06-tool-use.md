@@ -21,7 +21,7 @@
                             │
                             ▼
                    ┌─────────────────┐
-                   │  Application    │──── actual API call
+                   │  Application    │
                    │  executes tool  │
                    └────────┬────────┘
                             │
