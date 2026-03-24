@@ -42,15 +42,10 @@ Each numbered section should be **self-contained** and explain the most importan
 
 ## Vocabulary: What the LLM produces
 
-| Term | Use when... |
-|------|-------------|
-| **"continuation"** | Section 1 only, explaining the base prediction mechanism |
-| **"response"** | Default from section 2 onward, conversational contexts |
-| **"output"** | Technical contexts, failure modes, hallucinations, trust |
-| **"result"** | Data returned by tools/APIs — never for the model's own text |
-| ~~"answer"~~ | Avoid — implies correctness and authority |
-
-Bridge in section 1: transition explicitly from "continuation" (mechanism) to "response" (experience). Brief glossary note mapping to industry terms readers may encounter elsewhere ("completion," "generation").
+- **"continuation"** in section 1 only, when explaining the base mechanism
+- **"result"** for data returned by tools/APIs — never for the model's own text
+- **"response," "answer," "output"** — use whichever fits the sentence naturally
+- When discussing failure modes, hallucinations, or reliability, avoid language that implies the model is reliably correct (applies to "answer," "know," "understand," "explain" equally)
 
 ## Vocabulary: Core concepts
 
