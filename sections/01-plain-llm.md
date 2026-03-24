@@ -2,6 +2,7 @@
 
 The AI products you use daily — ChatGPT, Claude, Gemini, and the like — are all powered by a Large Language Model, or LLM: the engine under the hood. This primer takes apart the system built around it, layer by layer.
 
+<!-- diagram:01-plain-llm-diagram1
 ```
         "The capital of France is"
                        │
@@ -13,6 +14,8 @@ The AI products you use daily — ChatGPT, Claude, Gemini, and the like — are 
                        ▼
                     "Paris."
 ```
+-->
+![01-plain-llm-diagram1](../images/01-plain-llm-diagram1.png)
 
 An LLM is, at its core, a text continuation engine: given some text, it produces the most likely next piece of text, token by token. No memory, no knowledge updates after training, no logic in the classical sense — just extraordinarily good pattern recognition over language. It doesn't "answer questions" — it continues text. That it *appears* to answer questions is because a question followed by a good answer is the most likely continuation.
 
@@ -32,6 +35,7 @@ The temperature parameter hints at something deeper: **an LLM is a probability m
 
 ## Tokens — The Machine's Language
 
+<!-- diagram:01-plain-llm-diagram2
 ```
   "Strawberry fields forever"
                │
@@ -43,6 +47,8 @@ The temperature parameter hints at something deeper: **an LLM is a probability m
   [2645, 675, 15717, 5765, 8901]
   (Token IDs — what the model sees)
 ```
+-->
+![01-plain-llm-diagram2](../images/01-plain-llm-diagram2.png)
 
 Before the LLM processes anything, text is split into **tokens** — word fragments with numeric IDs. The model never sees raw text — it sees only these tokens. This seems like a technical detail, but it has big consequences.
 

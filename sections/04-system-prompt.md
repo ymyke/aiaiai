@@ -2,6 +2,7 @@
 
 In Section 3 we saw that the model receives a list of messages with roles. The system prompt is the first message in that list — written not by you, but by whoever built the product. It steers how the model behaves before you say a word, and it's where tool definitions, guardrails, and safety constraints live.
 
+<!-- diagram:04-system-prompt-diagram1
 ```
   ┌──────────────────────────────────────────────────────┐
   │  System Prompt (invisible to user)                   │
@@ -16,6 +17,8 @@ In Section 3 we saw that the model receives a list of messages with roles. The s
                       │     LLM     │
                       └─────────────┘
 ```
+-->
+![04-system-prompt-diagram1](../images/04-system-prompt-diagram1.png)
 
 A plain LLM is a general-purpose engine. A chatbot gives it memory. The system prompt gives it a *mission* — a role, rules, and tools, all specified in ordinary language by whoever built the product. The system prompt is where human intent steers model behavior — in plain language, not code.
 

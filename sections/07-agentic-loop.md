@@ -1,5 +1,6 @@
 # 7. The Agentic Loop — Autonomous Action
 
+<!-- diagram:07-agentic-loop-diagram1
 ```
   User: "Find an Italian restaurant near my office
          with outdoor seating, open tonight.
@@ -25,9 +26,12 @@
          "Reserved! Trattoria Bella, 7pm,
           table for 2, outdoor terrace."
 ```
+-->
+![07-agentic-loop-diagram1](../images/07-agentic-loop-diagram1.png)
 
 **Behind the scenes — the conversation grows with each loop:**
 
+<!-- diagram:07-agentic-loop-diagram2
 ```
 Step 1:  [..., user: "Find an Italian restaurant near my office..."]
              → tool_call: lookup_memory("my office")
@@ -42,6 +46,8 @@ Step 3:  [..., tool: { results: ["Trattoria Bella", "Casa Napoli", ...] }]
 
   ... continues until reservation is confirmed.
 ```
+-->
+![07-agentic-loop-diagram2](../images/07-agentic-loop-diagram2.png)
 
 In Section 5, the model made a single tool call and turned the result into an answer. That was one round.
 

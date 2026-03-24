@@ -1,5 +1,6 @@
 # 6. Tool Use — Acting on the World
 
+<!-- diagram:06-tool-use-diagram1
 ```
   ┌──────────────────────────────────────────────────────┐
   │  System prompt:                                      │
@@ -36,10 +37,13 @@
                             ▼
         "It's currently 28°C and humid in Tokyo."
 ```
+-->
+![06-tool-use-diagram1](../images/06-tool-use-diagram1.png)
 
 
 **Behind the scenes — what the LLM sees at each step:**
 
+<!-- diagram:06-tool-use-diagram2
 ```
 Step 1:  [system: "You are a helpful assistant.",
           tools: [get_weather, web_search],
@@ -52,6 +56,8 @@ Step 2:  [system: "...", tools: [...],
           tool: { temp: "28°C", condition: "humid" }]
               → LLM responds with: "It's currently 28°C and humid in Tokyo."
 ```
+-->
+![06-tool-use-diagram2](../images/06-tool-use-diagram2.png)
 
 The LLM doesn't execute tools itself. It only decides *which* tool to call with *which* parameters. The application around the LLM performs the actual call and feeds the result back.
 

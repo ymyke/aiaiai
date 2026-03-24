@@ -2,6 +2,7 @@
 
 The LLM from Section 1 has no memory — each call starts from zero. A chatbot creates the illusion of a continuous conversation by resending everything that was said before.
 
+<!-- diagram:03-chatbot-diagram1
 ```
   Round 1:                           Round 2:
   ┌──────────────────┐              ┌──────────────────────────────────┐
@@ -18,11 +19,14 @@ The LLM from Section 1 has no memory — each call starts from zero. A chatbot c
                                                      ▼
                                               "Your name is Max."
 ```
+-->
+![03-chatbot-diagram1](../images/03-chatbot-diagram1.png)
 
 Look at Round 2 in the diagram above: the application doesn't just send the new question — it resends the entire conversation so far. The model sees "I'm Max," its own reply, and only then the follow-up question. This bundled history is the reason it knows your name.
 
 Remove that history, and the same question fails:
 
+<!-- diagram:03-chatbot-diagram2
 ```
   Round 1:                           Round 2 (no history):
   ┌──────────────────┐              ┌──────────────────────────┐
@@ -37,6 +41,8 @@ Remove that history, and the same question fails:
            ▼                                     ▼
     "Hello Max!"                    "I don't know your name."
 ```
+-->
+![03-chatbot-diagram2](../images/03-chatbot-diagram2.png)
 
 **The LLM itself has no memory.** Every round, the entire conversation history is sent again as input. The chatbot is an application *around* the LLM that manages this history and includes it with every call.
 
@@ -46,6 +52,7 @@ What products like ChatGPT call "memory" is built on the same principle — with
 
 **Message format** — Behind the scenes, every conversation is structured using labeled roles — think of it as a script with named speakers:
 
+<!-- diagram:03-chatbot-diagram3
 ```
 messages: [
   { role: "system",    content: "You are a helpful assistant." },
@@ -54,5 +61,7 @@ messages: [
   { role: "user",      content: "What's my name?" }
 ]
 ```
+-->
+![03-chatbot-diagram3](../images/03-chatbot-diagram3.png)
 
 The "system" message sets behavior (more on that next). The "user" and "assistant" messages are the conversation turns. The roles serve a practical purpose: they let the model distinguish instructions to follow (system) from input to respond to (user) from its own prior responses to stay consistent with (assistant). This format is what every chatbot, API wrapper, and agent framework uses under the hood.
