@@ -89,6 +89,20 @@ See [panel.md](panel.md) — content panel (what to teach, how to teach it) and 
 - **No emojis** in diagrams (consistent with prose style)
 - **Cross-references** in diagrams: use "section N" (not §)
 
+## Diagram Images
+
+GitBook's monospace font (IBM Plex Mono) breaks box-drawing character alignment.
+Diagrams are rendered as PNG images using Fira Code instead.
+
+**How it works:**
+- ASCII diagrams live in HTML comments (`<!-- diagram:NAME ... -->`) in each section
+- Below each comment is `![](../images/NAME.png)` — GitBook renders the image, ignores the comment
+- `python3 images/render.py` extracts diagrams from the comments and renders PNGs
+- All images are rendered at the same width so font size is consistent across diagrams
+- Edit the ASCII art inside the comment, run `render.py`, commit the updated PNG
+
+**Files:** `images/render.py` (script), `images/FiraCode.ttf` (font), `images/*.png` (output)
+
 ## Publishing
 
 The primer is published via GitBook, driven by `SUMMARY.md`.
