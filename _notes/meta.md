@@ -52,6 +52,18 @@ Each numbered section should be **self-contained** and explain the most importan
 
 Bridge in section 1: transition explicitly from "continuation" (mechanism) to "response" (experience). Brief glossary note mapping to industry terms readers may encounter elsewhere ("completion," "generation").
 
+## Vocabulary: Core concepts
+
+| Concept | Term | Notes |
+|---------|------|-------|
+| The neural network | **"the model"** / **"LLM"** | Interchangeable once LLM is introduced in section 1 |
+| The code around the LLM | **"the application"** (around the model/LLM) | Used descriptively, not as a coined term. The primer uses "the application around the LLM" to establish the concept, then "the application" as shorthand. Section 9 acknowledges overlapping engineering terms (application layer, orchestration layer, harness, stack) without anointing any as "the" term. |
+| The whole thing (model + application + tools) | **"AI system"** or **"the product"** | "AI system" when describing how the system works technically. "The product" when describing what the user interacts with (ChatGPT, Claude). Neither formalized as jargon. |
+| The hosting company | **"the provider"** | Introduced once in section 9 or 10, tied to data privacy and content policies. |
+| External capabilities | **"tools"** | Consistent throughout sections 6–9 |
+| The finite input space | **"context window"** | Consistent throughout |
+| LLM-directed loop with tools | **"agent"** | Defined in section 7 |
+
 ## Examples
 
 - **Concrete over generic.** "Summarize these 12 restaurant reviews" beats "Summarize this document." Vivid scenarios the reader can picture.
