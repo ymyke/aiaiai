@@ -437,6 +437,13 @@ TEMPLATE = """\
 
     .prev-next a:hover {{ color: var(--accent); background: var(--code-bg); text-decoration: none; }}
 
+    .license {{
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: var(--fg-faint);
+      text-align: center;
+    }}
+
     /* --- Scrollbar --- */
     ::-webkit-scrollbar {{ width: 0px; }}
     ::selection {{ background: var(--accent); color: #fff; }}
@@ -501,6 +508,9 @@ TEMPLATE = """\
       <div>{prev}</div>
       <div>{next}</div>
     </div>
+    <footer class="license">
+      Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    </footer>
   </main>
   <script>
     (function() {{
