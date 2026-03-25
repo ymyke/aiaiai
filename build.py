@@ -244,7 +244,7 @@ def main():
         sidebar = build_sidebar(pages, -1)
 
         html = TEMPLATE.format(
-            title="AI Primer",
+            title="aiaiai",
             brand=build_brand_lockup(),
             hero_title=f"<h1>{build_brand_lockup('title-logo-mark')}AI Primer</h1>",
             sidebar=sidebar,
