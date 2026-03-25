@@ -22,7 +22,7 @@
       --accent: #4f46e5;
       --accent-hover: #4338ca;
       --border: #f0f0f0;
-      --code-bg: #f8f8f9;
+      --code-bg: #f3f2ff;
       --sidebar-w: 240px;
       --content-max: 640px;
     }
@@ -35,7 +35,7 @@
       --accent: #a78bfa;
       --accent-hover: #c4b5fd;
       --border: #1e1e1e;
-      --code-bg: #111111;
+      --code-bg: #110f1a;
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -52,23 +52,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* --- Progress --- */
-    .progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 1px;
-      width: 0%;
-      background: var(--accent);
-      z-index: 1000;
-      transition: width 0.15s linear;
-    }
-
     /* --- Sidebar --- */
     .sidebar {
       width: var(--sidebar-w);
       min-width: var(--sidebar-w);
-      background: var(--bg);
+      background: radial-gradient(ellipse at top left, #f3f2ff 0%, var(--bg) 70%);
       position: fixed;
       top: 0; left: 0; bottom: 0;
       overflow-y: auto;
@@ -117,6 +105,7 @@
 
     html[data-theme="light"] .icon-sun { display: none; }
     html[data-theme="dark"] .icon-moon { display: none; }
+    html[data-theme="dark"] .sidebar { background: radial-gradient(ellipse at top left, #100f18 0%, var(--bg) 70%); }
 
     .sidebar-links { padding: 0; flex: 1; }
 
@@ -274,6 +263,9 @@
       display: block;
     }
 
+    .dc { color: #7c7cf0; }
+    html[data-theme="dark"] .dc { color: #6e6ec0; }
+
     /* --- Blockquotes --- */
     blockquote {
       border-left: 2px solid var(--border);
@@ -352,8 +344,25 @@
     ::selection { background: var(--accent); color: #fff; }
 
     /* --- Mobile --- */
+    .page-mark {
+      position: fixed;
+      bottom: 0.85rem;
+      right: 1.5rem;
+      font-family: var(--font-code);
+      font-size: 1.5rem;
+      color: #4f46e580;
+      letter-spacing: -0.2em;
+      text-decoration: none;
+      z-index: 1;
+    }
+
+    .page-mark:hover { color: var(--accent) !important; text-decoration: none; }
+    html[data-theme="dark"] .page-mark { color: #a78bfa60; }
+    html[data-theme="dark"] .page-mark:hover { color: #a78bfa !important; }
+
     @media (max-width: 860px) {
       .mobile-menu-btn { display: flex; }
+      .page-mark { display: none; }
       .mobile-overlay { display: block; }
 
       .sidebar {
@@ -380,13 +389,12 @@
     }
 
     @media print {
-      .sidebar, .mobile-menu-btn, .progress-bar, .prev-next, .mobile-overlay { display: none !important; }
+      .sidebar, .mobile-menu-btn, .prev-next, .mobile-overlay { display: none !important; }
       .content { margin-left: 0; max-width: 100%; padding: 0; }
     }
   </style>
 </head>
 <body>
-  <div class="progress-bar"></div>
   <div class="mobile-overlay"></div>
   <button class="mobile-menu-btn" aria-label="Toggle navigation">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -477,12 +485,11 @@ Step 3:  [..., tool: { results: [&quot;Trattoria Bella&quot;, &quot;Casa Napoli&
       Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
     </footer>
   </main>
+  <a href="index.html" class="page-mark">·&gt;</a>
   <script>
     (function() {
-      var bar = document.querySelector('.progress-bar');
-      window.addEventListener('scroll', function() {
-        var h = document.documentElement.scrollHeight - window.innerHeight;
-        bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+      document.querySelectorAll('pre code').forEach(function(el) {
+        el.innerHTML = el.innerHTML.replace(/([┌┐└┘│─├┤┬┴┼▼▶◀═╔╗╚╝║╠╣╦╩╬→←↓↑▲►◄●·]+)/g, '<span class="dc">$1</span>');
       });
       var btn = document.querySelector('.mobile-menu-btn');
       var sidebar = document.querySelector('.sidebar');
