@@ -344,25 +344,8 @@
     ::selection { background: var(--accent); color: #fff; }
 
     /* --- Mobile --- */
-    .page-mark {
-      position: fixed;
-      bottom: 0.85rem;
-      right: 1.5rem;
-      font-family: var(--font-code);
-      font-size: 1.5rem;
-      color: #c0c0c0;
-      letter-spacing: -0.2em;
-      text-decoration: none;
-      z-index: 1;
-    }
-
-    .page-mark:hover { color: var(--accent) !important; text-decoration: none; }
-    html[data-theme="dark"] .page-mark { color: #555; }
-    html[data-theme="dark"] .page-mark:hover { color: #a78bfa !important; }
-
     @media (max-width: 860px) {
       .mobile-menu-btn { display: flex; }
-      .page-mark { display: none; }
       .mobile-overlay { display: block; }
 
       .sidebar {
@@ -479,7 +462,6 @@
       Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
     </footer>
   </main>
-  <a href="index.html" class="page-mark" title="Home"><svg viewBox="0 0 64 64" style="width:3rem;height:3rem"><text x="4" y="48" fill="currentColor" font-family="'Fira Code',monospace" font-size="48" letter-spacing="-0.2em">·&gt;</text></svg></a>
   <script>
     (function() {
       document.querySelectorAll('pre code').forEach(function(el) {
