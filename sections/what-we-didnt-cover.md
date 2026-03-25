@@ -22,4 +22,4 @@ When ChatGPT explains biology "correctly," it's because the explanation existed 
 
 ---
 
-*This primer is a work in progress. If something is unclear, missing, or wrong — or if you have a better example or analogy — contributions and feedback are welcome in the [GitHub repo](https://github.com/ymyke/ai-primer).*
+*This primer is a work in progress. If something is unclear, missing, or wrong — or if you have a better example or analogy — contributions and feedback are welcome in the [GitHub repo](https://github.com/ymyke/aiaiai).*

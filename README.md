@@ -4,7 +4,7 @@
 
 Nine short chapters — from how a text predictor becomes a chatbot to how tools enable autonomous agents.
 
-Access the primer here: https://aiprimer.guide
+Access the primer here: https://aiaiai.guide
 
 Contributions welcome — see [`_notes/meta.md`](_notes/meta.md) for tone, style, and structure guidelines.
 

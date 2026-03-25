@@ -24,4 +24,4 @@ This primer opens it up. Nine short chapters, each building on the last: how a t
 
 Written by [Myke Näf](https://ch.linkedin.com/in/michaelnaef) — computer scientist turned VC ([Übermorgen Ventures](https://uebermorgen.vc)) who still can't leave the terminal alone. With considerable help from the machines described herein.
 
-Found an error? Have a better way to explain something? [Contribute on GitHub](https://github.com/ymyke/ai-primer) — contributions welcome.
+Found an error? Have a better way to explain something? [Contribute on GitHub](https://github.com/ymyke/aiaiai) — contributions welcome.
