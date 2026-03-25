@@ -22,6 +22,6 @@ This primer opens it up. Nine short chapters, each building on the last: how a t
 
 *This grew out of years of working with these systems and explaining them to the people around me — and never finding quite the right guide to point them to. It deliberately simplifies — the goal is a useful mental model, not a textbook.*
 
-Found an error? Have a better way to explain something? [Contribute on GitHub](https://github.com/ymyke/ai-primer) — contributions welcome.
-
 Written by [Myke Näf](https://ch.linkedin.com/in/michaelnaef) — computer scientist turned VC ([Übermorgen Ventures](https://uebermorgen.vc)) who still can't leave the terminal alone. With considerable help from the machines described herein.
+
+Found an error? Have a better way to explain something? [Contribute on GitHub](https://github.com/ymyke/ai-primer) — contributions welcome.
